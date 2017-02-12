@@ -6,9 +6,9 @@ Forum di riferimento: http://www.flanesi.it/forum/viewtopic.php?f=4&t=1916
 
 Per installare:
 
-sudo -s
-cd /var/www/MyScripts
-gitclone ssgsdgdg
-mv VoltCtrl/VoltCtrl.service /etc/systemd/system/VoltCtrl.service
-chmod 755 VoltCtrl
-chown www-data:www-data VoltCtrl
+sudo -s<br>
+cd /var/www/MyScripts<br>
+gitclone ssgsdgdg<br>
+mv VoltCtrl/VoltCtrl.service /etc/systemd/system/VoltCtrl.service<br>
+chmod 755 VoltCtrl<br>
+chown www-data:www-data VoltCtrl<br>
