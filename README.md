@@ -11,8 +11,8 @@ sudo -s<br>
 cd /var/www/MyScripts<br>
 git clone https://github.com/amorospo/VoltCtrl.git<br>
 mv VoltCtrl/VoltCtrl.service /etc/systemd/system/VoltCtrl.service<br>
-chmod 755 VoltCtrl<br>
-chown www-data:www-data VoltCtrl<br>
+chmod -R 755 VoltCtrl<br>
+chown -R www-data:www-data VoltCtrl<br>
 
 Una volta installato per prima cosa occorre modificare le variabili a proprio uso e consumo accedendo alla pagina web:<br>
 http://localhost/MyScripts/VoltCtrl/Modulo.htm<br>
