@@ -26,4 +26,3 @@ sudo systemctl start VoltCtrl<br>
 e poi un bel riavvio del sistema
 
 shutdown -r now<br>
-
