@@ -9,7 +9,7 @@ Per installare:
 
 sudo -s<br>
 cd /var/www/MyScripts<br>
-gitclone https://github.com/amorospo/VoltCtrl.git<br>
+git clone https://github.com/amorospo/VoltCtrl.git<br>
 mv VoltCtrl/VoltCtrl.service /etc/systemd/system/VoltCtrl.service<br>
 chmod 755 VoltCtrl<br>
 chown www-data:www-data VoltCtrl<br>
