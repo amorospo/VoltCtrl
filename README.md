@@ -2,7 +2,8 @@
 
 Sistema di monitoraggio della tensione elettrica tramite invio di avvisi e allarmi via email. Basato sull'utilizzo di meterN e contatori SDM.
 
-Forum di riferimento: http://www.flanesi.it/forum/viewtopic.php?f=4&t=1916
+Topic di riferimento: http://www.flanesi.it/forum/viewtopic.php?f=4&t=1916
+
 
 Per installare:
 
@@ -12,9 +13,20 @@ gitclone https://github.com/amorospo/VoltCtrl.git<br>
 mv VoltCtrl/VoltCtrl.service /etc/systemd/system/VoltCtrl.service<br>
 chmod 755 VoltCtrl<br>
 chown www-data:www-data VoltCtrl<br>
+
+
+Per abilitare e far partire il servizio all'avvio del sistema:
+
 sudo systemctl enable VoltCtrl<br>
 sudo systemctl start VoltCtrl<br>
+
+
+Per prima cosa occorre modificare le variabili a proprio uso e consumo accedendo alla pagina web:
+\\localhost\MyScripts\VoltCtrl\Modulo.htm
+e seguire le istruzioni a video
+
 
 e poi un bel riavvio del sistema
 
 shutdown -r now<br>
+
