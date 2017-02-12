@@ -42,10 +42,10 @@ elseif (!preg_match('/^[A-Za-z0-9_.@, \'-]+$/i',$from_addr)) {
   echo 'il sesto campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
 }
-elseif (!preg_match('/^[A-Za-z0-9_.@, \'-]+$/i',$pwd)) {
-  echo 'il settimo campo contiene caratteri non ammessi';
-  echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
-}
+//elseif (!preg_match('/^[A-Za-z0-9_.@, \'-]+$/i',$pwd)) {
+//  echo 'il settimo campo contiene caratteri non ammessi';
+//  echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
+//}
 elseif (!preg_match('/^[A-Za-z0-9_.,@ \'-]+$/i',$to_addrs)) {
   echo 'il ottavo campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
