@@ -73,7 +73,7 @@ echo 'Impossibile accedere al file di configurazione. <br><a href=\"javascript:h
 }else{
 $apriw = fopen ("Variabili_VoltCTRL.py","w+");
 
-// Scrivo il file con le variabile che leggerà lo script
+// Scrivo il file con le variabile che leggerÃ  lo script
 fputs($apriw,'site = "' . $site . '"' . "\n");
 fputs($apriw,'Volt = "' . $Volt . '"' . "\n");
 fputs($apriw,'met_V = "' . $met_V . '"' . "\n");
