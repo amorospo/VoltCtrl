@@ -14,8 +14,8 @@ mv VoltCtrl/VoltCtrl.service /etc/systemd/system/VoltCtrl.service<br>
 chmod 755 VoltCtrl<br>
 chown www-data:www-data VoltCtrl<br>
 
-Una volta installato per prima cosa occorre modificare le variabili a proprio uso e consumo accedendo alla pagina web:
-\\localhost\MyScripts\VoltCtrl\Modulo.htm
+Una volta installato per prima cosa occorre modificare le variabili a proprio uso e consumo accedendo alla pagina web:<br>
+http://localhost/MyScripts/VoltCtrl/Modulo.htm<br>
 e seguire le istruzioni a video
 
 Successivamente bisogna abilitare e far partire il servizio all'avvio del sistema:
