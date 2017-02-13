@@ -15,7 +15,7 @@ chmod -R 755 VoltCtrl<br>
 chown -R www-data:www-data VoltCtrl<br>
 
 Una volta installato per prima cosa occorre modificare le variabili a proprio uso e consumo accedendo alla pagina web:<br>
-http://localhost/MyScripts/VoltCtrl/Modulo.htm<br>
+http://localhost/MyScripts/VoltCtrl/Modulo.php<br>
 e seguire le istruzioni a video
 
 Successivamente bisogna abilitare e far partire il servizio all'avvio del sistema:
@@ -23,6 +23,23 @@ Successivamente bisogna abilitare e far partire il servizio all'avvio del sistem
 sudo systemctl enable VoltCtrl<br>
 sudo systemctl start VoltCtrl<br>
 
-e poi un bel riavvio del sistema
+e poi un bel riavvio del sistema (non necessario, giusto per vedere se tutto funziona al riavvio)
 
 shutdown -r now<br>
+
+Al riavvio controlliamo il service se viene caricato e funziona correttamente.
+
+sudo service VoltCtrl status
+
+l'output dovrebbe essere qualcosa del genere:
+
+● VoltCtrl.service - Voltage monitoring email warnings
+   Loaded: loaded (/etc/systemd/system/VoltCtrl.service; enabled)
+   Active: active (running) since lun 2017-02-13 11:03:55 CET; 1s ago
+ Main PID: 26322 (StartService.sh)
+   CGroup: /system.slice/VoltCtrl.service
+           ├─26322 /bin/sh /var/www/MyScripts/VoltCtrl/StartService.sh
+           ├─26330 python /var/www/MyScripts/VoltCtrl/ChkVar.py
+           └─26331 python /var/www/MyScripts/VoltCtrl/VoltCTRL.py
+
+feb 13 11:03:55 raspberrypi systemd[1]: Started Voltage monitoring email warnings.
