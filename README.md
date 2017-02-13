@@ -3,7 +3,7 @@
 Sistema di monitoraggio della tensione elettrica tramite invio di avvisi e allarmi via email. Basato sull'utilizzo di meterN e contatori SDM.
 
 Topic di riferimento: http://www.flanesi.it/forum/viewtopic.php?f=4&t=1916
-
+*******************************************************************************************************************
 
 Per installare:
 
@@ -27,19 +27,20 @@ e poi un bel riavvio del sistema (non necessario, giusto per vedere se tutto fun
 
 shutdown -r now<br>
 
+*******************************************************************************************************************
 Al riavvio controlliamo il service se viene caricato e funziona correttamente.
 
 sudo service VoltCtrl status
 
 l'output dovrebbe essere qualcosa del genere:
 
-● VoltCtrl.service - Voltage monitoring email warnings
-   Loaded: loaded (/etc/systemd/system/VoltCtrl.service; enabled)
-   Active: active (running) since lun 2017-02-13 11:03:55 CET; 1s ago
- Main PID: 26322 (StartService.sh)
-   CGroup: /system.slice/VoltCtrl.service
-           ├─26322 /bin/sh /var/www/MyScripts/VoltCtrl/StartService.sh
-           ├─26330 python /var/www/MyScripts/VoltCtrl/ChkVar.py
-           └─26331 python /var/www/MyScripts/VoltCtrl/VoltCTRL.py
+● VoltCtrl.service - Voltage monitoring email warnings<br>
+   Loaded: loaded (/etc/systemd/system/VoltCtrl.service; enabled)<br>
+   Active: active (running) since lun 2017-02-13 11:03:55 CET; 1s ago<br>
+ Main PID: 26322 (StartService.sh)<br>
+   CGroup: /system.slice/VoltCtrl.service<br>
+           ├─26322 /bin/sh /var/www/MyScripts/VoltCtrl/StartService.sh<br>
+           ├─26330 python /var/www/MyScripts/VoltCtrl/ChkVar.py<br>
+           └─26331 python /var/www/MyScripts/VoltCtrl/VoltCTRL.py<br>
 
 feb 13 11:03:55 raspberrypi systemd[1]: Started Voltage monitoring email warnings.
