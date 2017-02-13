@@ -68,7 +68,7 @@ elseif (!preg_match('/^[0-9 \'-]+$/i',$lapse)) {
 }else{
 
 //controllo che il file sia accessibile
-if (!$apri = fopen ("Variabili_VoltCTRL.py","w+")) {
+if (!$apriw = fopen ("Variabili_VoltCTRL.py","w+")) {
 echo 'Impossibile accedere al file di configurazione. <br><a href=\"javascript:history.go(-1)\">Controlla le impostazione del server e reinvia il modulo</a>';
 }else{
 $apriw = fopen ("Variabili_VoltCTRL.py","w+");
@@ -91,6 +91,28 @@ fputs($apriw,'lapse = ' . $lapse . "\n");
 fclose($apriw);
 }
 
+//creo il file variabili php per precompilare i moduli
+if (!$apriw = fopen ("VarOld.php","w+")) {
+echo 'Impossibile accedere al file di configurazione. <br><a href=\"javascript:history.go(-1)\">Controlla le impostazione del server e reinvia il modulo</a>';
+}else{
+$apriw = fopen ("VarOld.php","w+");
+fputs($apriw,'<?php' . "\n");
+fputs($apriw,'$site = "' . $site . '";' . "\n");
+fputs($apriw,'$Volt = "' . $Volt . '";' . "\n");
+fputs($apriw,'$met_V = "' . $met_V . '";' . "\n");
+fputs($apriw,'$smtp_S = "' . $smtp_S . '";' . "\n");
+fputs($apriw,'$smtp_P = ' . $smtp_P . ";\n");
+fputs($apriw,'$from_addr = "' . $from_addr . '";' . "\n");
+fputs($apriw,'$pwd = "' . $pwd . '";' . "\n");
+fputs($apriw,'$to_addrs = "' . $to_addrs . '";' . "\n");
+fputs($apriw,'$BlackOut = ' . $BlackOut . ";\n");
+fputs($apriw,'$LowV = ' . $LowV . ";\n");
+fputs($apriw,'$HiV = ' . $HiV . ";\n");
+fputs($apriw,'$lapse = ' . $lapse . ";\n");
+fputs($apriw,'?>' . "\n");
+fclose($apriw);
+}
+
 // Mostro un messaggio di conferma all'utente
 echo 'File di configurazione correttamente aggiornato.<br><br>';
 
@@ -99,4 +121,5 @@ echo 'Devi riavviare il servizio VoltCtrl per rendere effettive le modifiche. Cl
 echo "<input type=\"button\" onclick=\"location.href='RestartService.php'\" value=\"Riavvia il servizio adesso\"/>";
 echo "<br><br><a href=\"javascript:history.go(-1)\">Torna indietro</a>";
 }
+
 ?>
