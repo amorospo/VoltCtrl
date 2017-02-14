@@ -26,6 +26,7 @@ def send_msg():
         msg.attach(MIMEText(msg_obj))
         time.sleep(1)
         server.sendmail(from_addr, to_addrs.split(','), msg.as_string())
+	time.sleep(5)
         server.quit()
         time.sleep(lapse)                                 
 
