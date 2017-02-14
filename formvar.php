@@ -50,19 +50,19 @@ elseif (!preg_match('/^[A-Za-z0-9_.,@ \'-]+$/i',$to_addrs)) {
   echo 'il ottavo campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
 }
-elseif (!preg_match('/^[0-9 \'-]+$/i',$BlackOut)) {
+elseif (!preg_match('/^[0-9. \'-]+$/i',$BlackOut)) {
   echo 'il nono campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
 }
-elseif (!preg_match('/^[0-9 \'-]+$/i',$LowV)) {
+elseif (!preg_match('/^[0-9. \'-]+$/i',$LowV)) {
   echo 'il decimo campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
 }
-elseif (!preg_match('/^[0-9 \'-]+$/i',$HiV)) {
+elseif (!preg_match('/^[0-9. \'-]+$/i',$HiV)) {
   echo 'il undicesimo campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
 }
-elseif (!preg_match('/^[0-9 \'-]+$/i',$lapse)) {
+elseif (!preg_match('/^[0-9. \'-]+$/i',$lapse)) {
   echo 'il dodicesimo campo contiene caratteri non ammessi';
   echo "<br><a href=\"javascript:history.go(-1)\">Torna indietro e correggi i dati immessi</a>";
 }else{
